@@ -1,0 +1,129 @@
+@charset "utf-8";
+*{ margin: 0; padding: 0; font-size: 16px;}
+ul{ list-style: none;}
+img{ border: none;}
+a:link, a:visited{ color: #222; text-decoration: none;}
+body {
+  /*margin: auto;*/
+  list-style-type:none;
+}
+
+body {
+  width:100%;
+  height:100%;
+  background:url('../img/background_logo.png') no-repeat center fixed;
+  background-size: cover；
+}
+
+/*
+body li::before{
+  content: "\2022";
+  color: black;
+  font-size: 23px;
+  margin-right: 14px;
+}
+*/
+
+/* top */
+.top{
+  width: 100%;
+  height: 200px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgba(200, 200, 200, 0.75);
+}
+
+/* nav */
+.nav{ height: 40px; line-height: 40px; background-color: rgba(0, 0, 0, 0.5);  text-align: center;}
+.nav_con{ margin: 0 auto; width: 600px;}
+.nav_con li{ float: left; margin-left: 30px;}
+.nav_con li a{ color: #FFF; font-size: 14px; font-weight: bold;}
+.nav_con li a:hover{ color: rgb(9, 152, 247);}
+/*
+.nav_con li a:active{ color: rgb(9, 152, 247);}
+*/
+.active{ color: orange; font-weight: bold;}
+
+/* main */
+.main{
+  width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.middle {
+  width: 900px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.90);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.side_left {
+  float: left;
+  width: 140px;
+  background-color: rgba(255, 250, 250, 0.85);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.side_right {
+  float: right;
+  width: 200px;
+  background-color: rgba(255, 250, 250, 0.85);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+ 
+/* 列后清除浮动 */
+.main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* footer */
+.footer{ width: 100%; padding-bottom: 0px;position: fixed;bottom: 0px;}
+.footer_link{ width: 1200px; margin: 0 auto;}
+.footer_left{ float: left;}
+.footer_left span{ color: orange;}
+.footer_left li a{ color: #FFF;}
+.footer_left li a:hover{ color: olive;}
+.footer_right{ float: right;}
+.footer_right span{ color: orange;}
+.footer_right li a{ color: #FFF;}
+.footer_right li a:hover{ color: olive;}
+.license{ text-align: center; color: #FFF;}
+.license a{ color: olive;}
+
+/* 响应式布局 - 小于 1200 px 时改为上下布局 */
+@media screen and (max-width: 1200px) {
+  .top, .nav{
+    width: 100%;
+  }
+  .main, .middle, .side_left, .side_right {
+    width: 95%;
+  }
+  .footer_link, .footer_left, .footer_right{
+    width: 95%;
+    text-align: center;
+  }
+}
+
+/* 鼠标移动后出现下拉菜单 */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
